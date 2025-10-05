@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>Патриот</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+        <a href="#home">Главная</a>
+        <a href="#project">Проект</a>
+        <a href="#about">Обо мне</a>
+        <a href="#contacts">Обратная связь</a>
+    </div>
+    </nav>
+    <header>
+
+    </header>
+
+    <section id="home">
+        <hr width="15%" color="#333" size="3px">
+        <h1>Главная</h1>
+        <hr width="15%" color="#333" size="3px">
+        <p>Содержание главной страницы...</p>
+    </section>
+
+    <hr color="#333" width="80%" size="30px">
+
+    <section id="project">
+        <hr width="25%" color="#333" size="3px">
+        <h1>Суть проекта</h1>
+        <hr width="25%" color="#333" size="3px">
+        <p>...</p>
+    </section>
+
+    <hr color="#333" width="80%" size="30px">
+    
+    <section id="about">
+        <hr width="15%" color="#333" size="3px">
+        <h1>Обо мне</h1>
+        <hr width="15%" color="#333" size="3px">
+        <br>
+        <img src="photo.jpg" alt="Илья Васильев" id="slon-img">
+        <p>Васильев Илья Дмитриевич</p>
+        <table>
+            <tr><th><br></th></tr>
+            <tr>
+                <th id="about-me">
+                    <p>студент 3 курса Института Механики и Энергетики</p>
+                    <p>учусь в Ставропольском Государственном Аграрном Университете</p>
+                    <p>Представитель СНС Аграрного от ИМиЭ</p>
+                </th>
+                <th id="about-me2">
+                    <p>законченное Среднее Профессиональное Образование</p>
+                    <p>Победитель конкурса «Студенческий стартап»</p>
+                    <p>Дипломированный специалист в сфере ИИ</p>
+                </th>
+            </tr>
+        </table>
+    </section>
+
+    <hr color="#333" width="80%" size="30px">
+
+    <section id="contacts">
+        <hr width="25%" color="#333" size="3px">
+        <h1>Обратная связь</h1>
+        <hr width="25%" color="#333" size="3px">
+        <ul id="conect">
+            <li><h2><a href="https://vk.com/iluhapacanzdraviy" target="_blank">ВКонтакте</h2></p></li>
+            <li><h2><a href="mailto:fitbak1999@mail.ru">fitbak1999@mail.ru</h2></p></li>
+        </ul>
+    </section>
+
+    <hr color="#333" width="80%" size="30px">
+    
+    <script>
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            window.scrollTo({
+                top: targetSection.offsetTop - 60,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 100) {
+            navbar.style.background = 'rgba(51, 51, 51, 0.95)';
+            navbar.style.padding = '10px 0';
+        } else {
+            navbar.style.background = '#333';
+            navbar.style.padding = '15px 0';
+        }
+    });
+</script>
+</body>
+</html>
