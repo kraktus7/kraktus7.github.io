@@ -48,19 +48,19 @@ section p {
             text-align: center;
 }
 #home {            
-            background: linear-gradient(135deg, whitesmoke, #CFFFFF);     
+            background: linear-gradient(135deg, whitesmoke, #aaaaaa);     
 }
 
 #project {
-            background: linear-gradient(45deg, whitesmoke, #CFFFFF);            
+            background: linear-gradient(45deg, whitesmoke, #aaaaaa);            
 }
 
 #about {
-            background: linear-gradient(135deg, whitesmoke, #CFFFFF);
+            background: linear-gradient(135deg, whitesmoke, #aaaaaa);
 }
 
 #contacts {
-            background: linear-gradient(45deg, whitesmoke, #CFFFFF);
+            background: linear-gradient(45deg, whitesmoke, #aaaaaa);
 }
 
 #slon-img {
