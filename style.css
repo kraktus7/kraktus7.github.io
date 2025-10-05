@@ -34,11 +34,14 @@ body {
 section {
             color: #333;
             background-color: whitesmoke;
-            padding: 100px 50px;
+            padding: 50px 50px;
             min-height: 100vh;
             margin-bottom: 0;
 }
 
+section p {
+            text-align: center;
+}
 /* #home {
             
             
@@ -50,19 +53,15 @@ section {
 } */
 
 /* #about {
-
+            
 } */
-
-#about p {
-            display: flex;
-            justify-content: center;
-}
 
 #slon-img {
             display: block;
             margin: 0 auto;
             width: 300px;
             border-radius: 100%;
+            border: solid #333 3px;
 }
 
 #about table {
@@ -112,7 +111,8 @@ section {
 
 section h1 {
             text-align: center;
-            margin: 10px;
+            background-color: #777;
+            margin: 5px;
 }
 
 /* Адаптивность для мобильных */
