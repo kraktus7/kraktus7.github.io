@@ -42,7 +42,7 @@
         <hr width="15%" color="#333" size="3px">
         <br>
         <img src="photo.png" alt="Илья Васильев" id="slon-img">
-        <p>Васильев Илья Дмитриевич</p>
+        <p>Я, Васильев Илья Дмитриевич</p>
         <table>
             <tr><th><br></th></tr>
             <tr>
@@ -96,6 +96,38 @@
             navbar.style.background = '#333';
             navbar.style.padding = '15px 0';
         }
+    });
+    window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if(scrollY >= (sectionTop - 100)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if(link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+        const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    document.querySelectorAll('section, h1, p, img').forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
     });
 </script>
 </body>
