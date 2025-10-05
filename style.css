@@ -1,0 +1,136 @@
+body {
+            background-color: #333;
+            margin: 0;
+            padding-top: 70px
+}
+.navbar {
+            background-color: #333;
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+.nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: left;
+            padding: 0 20px;
+}
+
+.nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+.nav-links a:hover {
+            background-color: #555;
+        }
+
+section {
+            color: #333;
+            background-color: whitesmoke;
+            padding: 100px 50px;
+            min-height: 100vh;
+            margin-bottom: 0;
+}
+
+/* #home {
+            
+            
+} */
+
+/* #project {
+            
+            
+} */
+
+/* #about {
+
+} */
+
+#about p {
+            display: flex;
+            justify-content: center;
+}
+
+#slon-img {
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            border-radius: 100%;
+}
+
+#about table {
+            display: flex;
+            justify-content: center;
+}
+
+#about-me {
+            color: white;
+            background-color: #555;
+            width: 50%;
+            padding: 20px;
+            margin: 0 auto;
+            border: 5px solid #333;
+            text-align: center;
+}
+
+#about-me2 {
+            width: 50%;
+            padding: 20px;
+            margin: 0 auto;
+            border: 5px solid #333;
+            text-align: center;
+}
+
+#contacts a {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+
+}
+
+#contacts a:visited {
+            color: #333;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+}
+
+#contacts a:hover {
+            background-color: antiquewhite;
+}
+
+section h1 {
+            text-align: center;
+            margin: 10px;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    section {
+        padding: 80px 20px;
+    }
+    
+    #slon-img {
+        width: 200px;
+    }
+    
+    #about-me {
+        width: 95%;
+    }
+}
